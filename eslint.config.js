@@ -17,16 +17,16 @@ export default defineConfig([
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
       reactDom.configs.recommended,
-      eslintConfigPrettier,
+      eslintConfigPrettier
     ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  },
+          jsx: true
+        }
+      }
+    }
+  }
 ]);
