@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-@utility title {
-  @apply bg-amber-200 text-2xl;
+button {
+  @apply cursor-pointer rounded-md border border-gray-500 bg-gray-300 px-2 py-1 hover:bg-gray-400 active:bg-gray-500;
 }
