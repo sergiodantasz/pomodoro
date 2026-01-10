@@ -26,6 +26,9 @@ export function usePomodoro(
     setIsRunning(false);
     setCompletedCycles(0);
   }
+  function skip() {
+    finalizePeriod();
+  }
 
   function finalizePeriod() {
     if (mode !== "focus") {
@@ -67,7 +70,8 @@ export function usePomodoro(
     actions: {
       start,
       pause,
-      reset
+      reset,
+      skip
     }
   };
 }
