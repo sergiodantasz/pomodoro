@@ -1,0 +1,18 @@
+providers = ["node"]
+
+[variables]
+NIXPACKS_NODE_VERSION = "23"
+PORT = "5173"
+HOSTNAME = "0.0.0.0"
+
+[phases.install]
+cmds = ["bun install --frozen-lockfile"]
+cacheDirectories = ["/root/.bun/install/cache"]
+
+[phases.build]
+dependsOn = ["install"]
+cacheDirectories = ["node_modules/.cache"]
+cmds = ["bun run build"]
+
+[start]
+cmd = "bunx serve -s dist -l ${PORT}"
