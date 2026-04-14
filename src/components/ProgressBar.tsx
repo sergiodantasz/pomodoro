@@ -13,7 +13,7 @@ export const ProgressBar = ({
   const percentage = max > 0 ? Math.round((progressValue / max) * 100) : 0;
   return (
     <progress
-      className="progress w-48"
+      className="progress h-1 w-40 xs:h-2 xs:w-48"
       value={progressValue}
       max={max}
       aria-label={`Progress: ${percentage}%`}

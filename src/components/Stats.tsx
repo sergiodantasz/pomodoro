@@ -6,7 +6,7 @@ export const Stats = () => {
   const focusTime = usePomodoroStore((state) => state.focusTime);
   const breakTime = usePomodoroStore((state) => state.breakTime);
   return (
-    <div className="stats border border-base-200">
+    <div className="stats stats-vertical border border-base-200 xs:stats-horizontal">
       <div className="stat place-items-center">
         <div className="stat-title">Completed cycles</div>
         <div className="stat-value">{completedCycles}</div>

@@ -12,24 +12,23 @@ export const Controls = () => {
   const reset = usePomodoroStore((state) => state.reset);
   const skip = usePomodoroStore((state) => state.skip);
   const isRunning = usePomodoroStore((state) => state.isRunning);
-  const iconSize = 50;
   return (
-    <div className="flex gap-16">
+    <div className="flex gap-12 xs:gap-16">
       <button onClick={reset} aria-label="Reset timer">
-        <RiResetLeftLine size={iconSize} />
+        <RiResetLeftLine className="size-10 xs:size-12" />
       </button>
       <button
         onClick={isRunning ? pause : start}
         aria-label={isRunning ? "Pause timer" : "Start timer"}
       >
         {isRunning ? (
-          <RiPauseFill size={iconSize} className="scale-[140%]" />
+          <RiPauseFill className="size-10 scale-[140%] xs:size-12" />
         ) : (
-          <RiPlayFill size={iconSize} className="scale-[130%]" />
+          <RiPlayFill className="size-10 scale-[130%] xs:size-12" />
         )}
       </button>
       <button onClick={skip} aria-label="Skip to next period">
-        <RiSkipForwardFill size={iconSize} className="scale-125" />
+        <RiSkipForwardFill className="size-10 scale-125 xs:size-12" />
       </button>
     </div>
   );
